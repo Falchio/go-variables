@@ -9,32 +9,39 @@ import (
 )
 
 func main() {
-	m := message.NewPrinter(language.Russian)
+	printer := message.NewPrinter(language.Russian)
 
 	fmt.Println("Integers:")
 
-	m.Printf("MinInt: %d\n", math.MinInt)
-	m.Printf("MaxInt: %d\n", math.MaxInt)
+	printer.Printf("MinInt: %d\n", math.MinInt)
+	printer.Printf("MaxInt: %d\n", math.MaxInt)
 
-	m.Printf("MinInt8: %d\n", math.MinInt8)
-	m.Printf("MaxInt8: %d\n", math.MaxInt8)
+	printer.Printf("MinInt8: %d\n", math.MinInt8)
+	printer.Printf("MaxInt8: %d\n", math.MaxInt8)
 
-	m.Printf("MinInt16: %d\n", math.MinInt16)
-	m.Printf("MaxInt16: %d\n", math.MaxInt16)
+	printer.Printf("MinInt16: %d\n", math.MinInt16)
+	printer.Printf("MaxInt16: %d\n", math.MaxInt16)
 
-	m.Printf("MinInt32: %d\n", math.MinInt32)
-	m.Printf("MaxInt32: %d\n", math.MaxInt32)
+	printer.Printf("MinInt32: %d\n", math.MinInt32)
+	printer.Printf("MaxInt32: %d\n", math.MaxInt32)
 
-	m.Printf("MinInt64: %d\n", math.MinInt64)
-	m.Printf("MaxInt64: %d\n", math.MaxInt64)
+	printer.Printf("MinInt64: %d\n", math.MinInt64)
+	printer.Printf("MaxInt64: %d\n", math.MaxInt64)
 
 	fmt.Println("Unsigned Integers:")
 
-	var maxUint uint64 = math.MaxUint //без указания типа не инициализируется, пишет overflow
-	m.Printf("MaxUint: %d\n", maxUint)
-	m.Printf("MaxUint8: %d\n", math.MaxUint8)
-	m.Printf("MaxUint16: %d\n", math.MaxUint16)
-	m.Printf("MaxUint32: %d\n", math.MaxUint32)
-	m.Printf("MaxUint64: %d\n", uint64(math.MaxUint64))
+	printer.Printf("MaxUint: %d\n", uint64(math.MaxUint))
+	printer.Printf("MaxUint8: %d\n", math.MaxUint8)
+	printer.Printf("MaxUint16: %d\n", math.MaxUint16)
+	printer.Printf("MaxUint32: %d\n", math.MaxUint32)
+	printer.Printf("MaxUint64: %d\n", uint64(math.MaxUint64))
+
+	printer.Printf("byte (alias for uint8): %d\n", math.MaxUint8)
+
+	printer.Printf("min none zero float32: %f\n", math.SmallestNonzeroFloat32)
+	printer.Printf("Max float32: %f\n", math.MaxFloat32)
+
+	printer.Printf("min none zero float64: %f\n", math.SmallestNonzeroFloat64)
+	printer.Printf("float64: %f\n", math.MaxFloat64)
 
 }
