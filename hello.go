@@ -42,6 +42,6 @@ func main() {
 	printer.Printf("Max float32: %f\n", math.MaxFloat32)
 
 	printer.Printf("min none zero float64: %f\n", math.SmallestNonzeroFloat64)
-	printer.Printf("float64: %f\n", math.MaxFloat64)
+	printer.Printf("Max float64: %f\n", math.MaxFloat64)
 
 }
